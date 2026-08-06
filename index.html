@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julie Donuts | GOD PROVIDES • WE WIN</title>
+<meta name="description" content="Official presence of Julie Donuts — Truth Warrior, Christian, unwavering supporter of President Trump. Bringing hope, faith, and clarity in the final phase.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-light: #132238;
+    --crimson: #c41e3a;
+    --gold: #d4af37;
+    --cream: #f8f5f0;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5a6577;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(10, 22, 40, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--navy) 0%, #0f2440 60%, #1a0a14 100%);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://pbs.twimg.com/profile_banners/1671220869236916231/1772632024') center/cover;
+    opacity: 0.12;
+    filter: blur(2px);
+  }
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .hero-text h1 span { color: var(--gold); }
+  .tagline {
+    font-size: 1.35rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  .hero-bio {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 2.5rem;
+    max-width: 520px;
+  }
+  .cta-group { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s;
+    font-size: 1rem;
+  }
+  .btn-primary {
+    background: var(--crimson);
+    color: white;
+  }
+  .btn-primary:hover {
+    background: #a81830;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(196, 30, 58, 0.35);
+  }
+  .btn-outline {
+    border: 2px solid var(--gold);
+    color: var(--gold);
+  }
+  .btn-outline:hover {
+    background: var(--gold);
+    color: var(--navy);
+  }
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+  .profile-frame {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid var(--gold);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+    position: relative;
+  }
+  .profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 2rem;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    color: var(--navy);
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 3.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+  .about-img {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  }
+  .about-img img {
+    width: 100%;
+    display: block;
+  }
+  .about-text p {
+    margin-bottom: 1.25rem;
+    font-size: 1.08rem;
+    color: #333;
+  }
+  .about-text strong { color: var(--navy); }
+
+  /* FEATURED POSTS */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .post-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  .post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+  }
+  .post-card .content {
+    padding: 1.6rem;
+  }
+  .post-card .meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.8rem;
+  }
+  .post-card p {
+    font-size: 0.98rem;
+    margin-bottom: 1.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .post-card a {
+    color: var(--crimson);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .post-card a:hover { text-decoration: underline; }
+
+  /* VIDEOS */
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+  }
+  .video-card {
+    background: var(--navy);
+    color: white;
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: transform 0.2s;
+  }
+  .video-card:hover { transform: translateY(-4px); }
+  .video-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    color: var(--gold);
+  }
+  .video-card p {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 1.2rem;
+  }
+  .video-card a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 2px;
+  }
+
+  /* CONNECT */
+  .connect {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+  }
+  .connect .section-title { color: white; }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .social-btn {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(212,175,55,0.4);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.25s;
+    min-width: 180px;
+  }
+  .social-btn:hover {
+    background: var(--gold);
+    color: var(--navy);
+    border-color: var(--gold);
+  }
+
+  /* FOOTER */
+  footer {
+    background: #060e18;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 2.5rem 2rem;
+    font-size: 0.9rem;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero-content { grid-template-columns: 1fr; text-align: center; }
+    .hero-image { order: -1; }
+    .profile-frame { width: 280px; height: 280px; }
+    .about-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .cta-group { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">🇺🇸🍩 <span>JULIE DONUTS</span></a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#posts">Posts</a>
+    <a href="#videos">Videos</a>
+    <a href="#connect">Connect</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Julie <span>Donuts</span></h1>
+      <p class="tagline">GOD PROVIDES!! • WE WIN.</p>
+      <p class="hero-bio">
+        Truth warrior. Follower of Jesus Christ. Unwavering supporter of President Donald J. Trump. 
+        Bringing hope, clarity, and faith in the final phase of this spiritual and informational battle.
+      </p>
+      <div class="cta-group">
+        <a href="https://x.com/Juliedonuts" target="_blank" class="btn btn-primary">Follow on X</a>
+        <a href="https://juliedonuts.substack.com" target="_blank" class="btn btn-outline">Read on Substack</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="profile-frame">
+        <img src="https://pbs.twimg.com/profile_images/1671228892328099854/BZAFh_Zm.jpg" alt="Julie Donuts">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Julie</h2>
+    <p class="section-sub">Born for this time</p>
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="https://pbs.twimg.com/media/HK99KkIbUAAzVmb.jpg" alt="Julie Donuts meeting supporters">
+      </div>
+      <div class="about-text">
+        <p>
+          Julie Donuts is a bold, faith-filled voice reaching hundreds of thousands with a simple, powerful message: 
+          <strong>This is God’s war. We already won. Trust the plan. Trust the President. Trust Jesus Christ.</strong>
+        </p>
+        <p>
+          Born and raised in Cleveland, Ohio, she spent years working hard, raising a family, and waking up to the reality of the spiritual and geopolitical battle unfolding around us. 
+          What began as quiet research became a public calling after her posts caught the attention of President Trump himself (three times).
+        </p>
+        <p>
+          She does not sell anything. She does not claim special intel. Her only goals are to bring light into darkness, hope into fear, and as many people as possible to Christ — while standing firmly behind the man she believes God has anointed for this hour.
+        </p>
+        <p style="font-style: italic; color: var(--muted);">
+          “I am no one special. I’m just a complete and total lover of my Lord and Savior Jesus Christ… THE BEST IS YET TO COME.”
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED POSTS -->
+<section id="posts" style="background: #f0ebe3;">
+  <div class="container">
+    <h2 class="section-title">Recent Highlights</h2>
+    <p class="section-sub">Selected high-impact posts</p>
+    <div class="posts-grid">
+      <div class="post-card">
+        <div class="content">
+          <div class="meta">August 6, 2026 • 3.9K likes</div>
+          <p>THE START: 💥💥💥 MOTION FOR CONTEMPT IS A HELL YEAH! Guys this is just the beginning. MILITARY TRIBUNAL FOR CRIMES AGAINST HUMANITY.</p>
+          <a href="https://x.com/Juliedonuts/status/2085356510620574074" target="_blank">View post with video →</a>
+        </div>
+      </div>
+      <div class="post-card">
+        <div class="content">
+          <div class="meta">August 5, 2026 • 5.7K likes</div>
+          <p>President Trump Post: The EBS signal flashes during this broadcast. This is not an accident. It’s seeding. 👀 IYKYK. 🐸 NO FEAR. BE PREPARED. PRAY.</p>
+          <a href="https://x.com/Juliedonuts/status/2084985823263342907" target="_blank">View post with video →</a>
+        </div>
+      </div>
+      <div class="post-card">
+        <div class="content">
+          <div class="meta">August 3, 2026</div>
+          <p>As we move forward with this Informational and Spiritual battle… We do not have to agree on everything. Focus on free & fair elections and the fraudulent financial system. Leave egos at the door. WE THE PEOPLE!</p>
+          <a href="https://x.com/Juliedonuts/status/2084274271828787640" target="_blank">Read full post →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <div class="container">
+    <h2 class="section-title">Videos & Interviews</h2>
+    <p class="section-sub">Watch Julie’s shares and conversations</p>
+    <div class="videos-grid">
+      <div class="video-card">
+        <h3>Fauci Contempt Hearing</h3>
+        <p>Full context + Julie’s commentary on accountability beginning.</p>
+        <a href="https://x.com/Juliedonuts/status/2085354358120599604" target="_blank">Watch on X →</a>
+      </div>
+      <div class="video-card">
+        <h3>We Are in a War</h3>
+        <p>Critical thinking + prayer essential. God’s Army.</p>
+        <a href="https://x.com/Juliedonuts/status/2085331224659157260" target="_blank">Watch on X →</a>
+      </div>
+      <div class="video-card">
+        <h3>America Will Never Be Communist</h3>
+        <p>With President Trump and We the People.</p>
+        <a href="https://x.com/Juliedonuts/status/2085156184617558410" target="_blank">Watch on X →</a>
+      </div>
+      <div class="video-card">
+        <h3>Full Interview – Truth Teller Tales</h3>
+        <p>Deep conversation about her journey, faith, and what’s coming (June 2026).</p>
+        <a href="https://www.youtube.com/watch?v=aZ0OE9xoIsQ" target="_blank">Watch on YouTube →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section id="connect" class="connect">
+  <div class="container">
+    <h2 class="section-title">Stay Connected</h2>
+    <p style="color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto 1rem;">
+      Primary account only: <strong>@Juliedonuts</strong> on X. All others are frauds.
+    </p>
+    <div class="social-links">
+      <a href="https://x.com/Juliedonuts" target="_blank" class="social-btn">𝕏 @Juliedonuts</a>
+      <a href="https://juliedonuts.substack.com" target="_blank" class="social-btn">Substack</a>
+      <a href="https://truthsocial.com/@Luvsmileys3" target="_blank" class="social-btn">Truth Social</a>
+      <a href="https://www.youtube.com/watch?v=aZ0OE9xoIsQ" target="_blank" class="social-btn">YouTube Interview</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>GOD PROVIDES • WE WIN • TRUST OUR AMAZING PRESIDENT</p>
+  <p style="margin-top: 0.8rem;">
+    Unofficial professional showcase created with care for the community of Julie Donuts.<br>
+    All content and images belong to their respective owners. 
+    <a href="https://x.com/Juliedonuts" target="_blank">Follow the real @Juliedonuts</a>
+  </p>
+</footer>
+
+</body>
+</html>
