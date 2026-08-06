@@ -325,6 +325,12 @@
   .video-card p{font-size:0.97rem; color:var(--text-faint); margin-bottom:1rem; line-height:1.6;}
   .video-card a.link{color:var(--pink); font-weight:700; text-decoration:none; font-size:0.92rem; transition:color 0.2s ease;}
   .video-card a.link:hover{color:#ff47a8;}
+  .video-card.link-card{display:flex;align-items:center;justify-content:center;}
+  .video-card.link-card .info{text-align:center;padding:2rem 1.5rem;}
+  .video-card.link-card h3{font-size:1.3rem;}
+  .video-card.link-card p{font-size:1rem;margin-bottom:1.2rem;}
+  .video-card.link-card a.link{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.5rem;background:var(--pink-subtle);border-radius:10px;transition:all 0.3s var(--ease-out);}
+  .video-card.link-card a.link:hover{background:var(--pink);color:#fff;transform:translateY(-2px);}
 
   .connect{
     background:radial-gradient(ellipse 900px 550px at 50% 0%, rgba(255,45,149,0.2), transparent 65%), var(--deep);
@@ -555,7 +561,7 @@
       </div>
       <div class="videos-grid">
 
-        <!-- Video 1 - If You Hate America, Get Out -->
+        <!-- Video 1 - If You Hate America, Get Out (Rumble) -->
         <article class="video-card">
           <div class="thumbnail" tabindex="0" role="button" aria-label="Play If You Hate America, Get Out">
             <img src="thumbnail.png" alt="If You Hate America, Get Out thumbnail" loading="lazy">
@@ -570,68 +576,8 @@
           </div>
         </article>
 
-        <!-- Video 2 - THE START – Contempt Motion -->
+        <!-- Video 2 - Truth Teller Tales Interview (YouTube) -->
         <article class="video-card">
-          <div class="thumbnail" tabindex="0" role="button" aria-label="Play THE START – Contempt Motion">
-            <img src="https://img.youtube.com/vi/aZ0OE9xoIsQ/sddefault.jpg" alt="THE START – Contempt Motion thumbnail" loading="lazy">
-          </div>
-          <div class="video-box">
-            <blockquote class="twitter-tweet" data-theme="dark"><a href="https://x.com/Juliedonuts/status/2085356510620574074"></a></blockquote>
-          </div>
-          <div class="info">
-            <h3>THE START – Contempt Motion</h3>
-            <p>Military tribunal for crimes against humanity.</p>
-            <a class="link" href="https://x.com/Juliedonuts/status/2085356510620574074" target="_blank" rel="noopener noreferrer">View on X →</a>
-          </div>
-        </article>
-
-        <!-- Video 3 - Fauci Contempt Hearing -->
-        <article class="video-card">
-          <div class="thumbnail" tabindex="0" role="button" aria-label="Play Fauci Contempt Hearing">
-            <img src="thumbnail.png" alt="Fauci Contempt Hearing thumbnail" loading="lazy">
-          </div>
-          <div class="video-box">
-            <blockquote class="twitter-tweet" data-theme="dark"><a href="https://x.com/Juliedonuts/status/2085353831181729792"></a></blockquote>
-          </div>
-          <div class="info">
-            <h3>Fauci Contempt Hearing</h3>
-            <p>"Just getting started… Down they will ALL go."</p>
-            <a class="link" href="https://x.com/Juliedonuts/status/2085353831181729792" target="_blank" rel="noopener noreferrer">View on X →</a>
-          </div>
-        </article>
-
-        <!-- Video 4 - We Are in a WAR -->
-        <article class="video-card">
-          <div class="thumbnail" tabindex="0" role="button" aria-label="Play We Are in a WAR">
-            <img src="https://img.youtube.com/vi/aZ0OE9xoIsQ/sddefault.jpg" alt="We Are in a WAR thumbnail" loading="lazy">
-          </div>
-          <div class="video-box">
-            <blockquote class="twitter-tweet" data-theme="dark"><a href="https://x.com/Juliedonuts/status/2085331177297072128"></a></blockquote>
-          </div>
-          <div class="info">
-            <h3>We Are in a WAR</h3>
-            <p>Critical thinking + prayer is essential. GOD WINS.</p>
-            <a class="link" href="https://x.com/Juliedonuts/status/2085331177297072128" target="_blank" rel="noopener noreferrer">View on X →</a>
-          </div>
-        </article>
-
-        <!-- Video 5 - America Will Never Be Communist -->
-        <article class="video-card">
-          <div class="thumbnail" tabindex="0" role="button" aria-label="Play America Will Never Be Communist">
-            <img src="thumbnail.png" alt="America Will Never Be Communist thumbnail" loading="lazy">
-          </div>
-          <div class="video-box">
-            <blockquote class="twitter-tweet" data-theme="dark"><a href="https://x.com/Juliedonuts/status/2085156072629698560"></a></blockquote>
-          </div>
-          <div class="info">
-            <h3>America Will Never Be Communist</h3>
-            <p>With President Trump and We the People.</p>
-            <a class="link" href="https://x.com/Juliedonuts/status/2085156072629698560" target="_blank" rel="noopener noreferrer">View on X →</a>
-          </div>
-        </article>
-
-        <!-- Video 6 - Truth Teller Tales Interview -->
-        <article class="video-card" data-video="https://www.youtube.com/watch?v=aZ0OE9xoIsQ">
           <div class="thumbnail" tabindex="0" role="button" aria-label="Play Truth Teller Tales Interview">
             <img src="https://img.youtube.com/vi/aZ0OE9xoIsQ/sddefault.jpg" alt="Truth Teller Tales Interview thumbnail" loading="lazy">
           </div>
@@ -642,6 +588,39 @@
             <h3>Truth Teller Tales Interview</h3>
             <p>Full conversation about her journey and faith.</p>
             <a class="link" href="https://www.youtube.com/watch?v=aZ0OE9xoIsQ" target="_blank" rel="noopener noreferrer">Watch on YouTube →</a>
+          </div>
+        </article>
+
+        <!-- Link Cards for X Posts -->
+        <article class="video-card link-card">
+          <div class="info">
+            <h3>THE START – Contempt Motion</h3>
+            <p>Military tribunal for crimes against humanity.</p>
+            <a class="link" href="https://x.com/Juliedonuts/status/2085356510620574074" target="_blank" rel="noopener noreferrer">View on X →</a>
+          </div>
+        </article>
+
+        <article class="video-card link-card">
+          <div class="info">
+            <h3>Fauci Contempt Hearing</h3>
+            <p>"Just getting started… Down they will ALL go."</p>
+            <a class="link" href="https://x.com/Juliedonuts/status/2085353831181729792" target="_blank" rel="noopener noreferrer">View on X →</a>
+          </div>
+        </article>
+
+        <article class="video-card link-card">
+          <div class="info">
+            <h3>We Are in a WAR</h3>
+            <p>Critical thinking + prayer is essential. GOD WINS.</p>
+            <a class="link" href="https://x.com/Juliedonuts/status/2085331177297072128" target="_blank" rel="noopener noreferrer">View on X →</a>
+          </div>
+        </article>
+
+        <article class="video-card link-card">
+          <div class="info">
+            <h3>America Will Never Be Communist</h3>
+            <p>With President Trump and We the People.</p>
+            <a class="link" href="https://x.com/Juliedonuts/status/2085156072629698560" target="_blank" rel="noopener noreferrer">View on X →</a>
           </div>
         </article>
 
