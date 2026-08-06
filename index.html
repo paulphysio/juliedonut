@@ -224,15 +224,36 @@
   .section-sub{color:var(--text-faint);margin-top:0.6rem;font-size:1rem;letter-spacing:0.02em;}
 
   .featured{background:linear-gradient(180deg, var(--purple), var(--navy));border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .video-box{
+  .featured-thumbnail{
+    display:block;text-decoration:none;
     max-width:860px;margin:0 auto;
+  }
+  .featured-thumbnail .thumbnail{
     border-radius:18px;overflow:hidden;background:#000;
     border:1px solid var(--line);
     box-shadow:var(--shadow-lg);
     transition:transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+    position:relative;aspect-ratio:16/9;cursor:pointer;
   }
-  .video-box:hover{transform:translateY(-4px);box-shadow:0 25px 65px rgba(0,0,0,0.5);}
-  .video-box video,.video-box iframe{width:100%;aspect-ratio:16/9;display:block;border:0;}
+  .featured-thumbnail:hover .thumbnail{transform:translateY(-4px);box-shadow:0 25px 65px rgba(0,0,0,0.5),0 0 30px var(--pink-glow);border-color:var(--pink);}
+  .featured-thumbnail .thumbnail img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s var(--ease-out), opacity 0.3s ease;}
+  .featured-thumbnail:hover .thumbnail img{transform:scale(1.05);opacity:0.9;}
+  .featured-thumbnail .thumbnail::after{
+    content:'';position:absolute;top:50%;left:50%;
+    width:80px;height:80px;border-radius:50%;
+    background:rgba(255,45,149,0.9);
+    transform:translate(-50%, -50%);
+    display:flex;align-items:center;justify-content:center;
+    opacity:0;transition:opacity 0.3s ease;
+    box-shadow:0 0 25px var(--pink-glow);
+  }
+  .featured-thumbnail:hover .thumbnail::after{opacity:1;}
+  .featured-thumbnail .thumbnail::before{
+    content:'▶';position:absolute;top:50%;left:50%;
+    transform:translate(-50%, -50%);color:#fff;font-size:2rem;
+    opacity:0;transition:opacity 0.3s ease;z-index:1;
+  }
+  .featured-thumbnail:hover .thumbnail::before{opacity:1;}
   .featured-actions{text-align:center;margin-top:1.8rem;}
 
   .about{background:linear-gradient(180deg, var(--deep), var(--navy));}
@@ -260,8 +281,7 @@
   .gallery-track:active{cursor:grabbing;}
   .gallery-item{flex:0 0 100%;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#000;}
   .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s var(--ease-out), opacity 0.3s ease;}
-  .gallery-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent, rgba(10,10,18,0.95));padding:1.2rem 1rem;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.08em;transform:translateY(100%);transition:transform 0.3s var(--ease-out);}
-  .gallery-item:hover .gallery-caption{transform:translateY(0);}
+  .gallery-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent, rgba(10,10,18,0.98));padding:1.4rem 1.2rem;font-family:var(--font-mono);font-size:0.85rem;color:#fff;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;box-shadow:0 -4px 20px rgba(0,0,0,0.5);}
   .gallery-nav{display:flex;justify-content:center;align-items:center;gap:1rem;margin-top:1.5rem;}
   .gallery-nav-btn{
     width:44px;height:44px;border-radius:50%;background:var(--purple);border:1px solid var(--line);
@@ -317,12 +337,11 @@
     opacity:0;transition:opacity 0.3s ease;z-index:1;
   }
   .video-card .thumbnail:hover::before{opacity:1;}
-  .video-card .video-box{border:0; box-shadow:none; border-radius:0; display:none;}
-  .video-card.playing .thumbnail{display:none;}
-  .video-card.playing .video-box{display:block;}
+  .video-card .thumbnail-link{text-decoration:none;display:block;}
+  .video-card .thumbnail-link:hover .thumbnail{box-shadow:0 0 30px var(--pink-glow);border-color:var(--pink);}
   .video-card .info{padding:1.5rem;}
   .video-card h3{font-family:var(--font-display); font-size:1.18rem; font-weight:600; margin-bottom:0.5rem; letter-spacing:-0.2px;}
-  .video-card p{font-size:0.97rem; color:var(--text-faint); margin-bottom:1rem; line-height:1.6;}
+  .video-card p{font-size:0.97rem; color:var(--text-faint); margin-bottom:0; line-height:1.6;}
   .video-card a.link{color:var(--pink); font-weight:700; text-decoration:none; font-size:0.92rem; transition:color 0.2s ease;}
   .video-card a.link:hover{color:#ff47a8;}
   .video-card.link-card{display:flex;align-items:center;justify-content:center;}
@@ -450,14 +469,13 @@
       <p class="eyebrow">Featured</p>
       <h2 id="featured-title" class="section-title">If You Hate America, <em>Get Out</em></h2>
     </div>
-    <div class="video-box">
-      <video controls playsinline preload="metadata" poster="https://pbs.twimg.com/amplify_video_thumb/2084652422417231872/img/DokV3OPXFDr78egd.jpg">
-        <source src="https://video.twimg.com/amplify_video/2084652422417231872/vid/avc1/1280x720/KzGdg_56D7vhWB0Y.mp4" type="video/mp4">
-        Your browser doesn't support embedded video. <a href="https://rumble.com/v7dpoeu-if-you-hate-america-get-out-julie-donuts.html" target="_blank" rel="noopener noreferrer">Watch on Rumble</a>.
-      </video>
-    </div>
+    <a href="https://rumble.com/v7dpoeu-if-you-hate-america-get-out-julie-donuts.html" target="_blank" rel="noopener noreferrer" class="featured-thumbnail" aria-label="Watch If You Hate America, Get Out on Rumble">
+      <div class="thumbnail">
+        <img src="thumbnail.png" alt="If You Hate America, Get Out thumbnail" loading="lazy">
+      </div>
+    </a>
     <div class="featured-actions">
-      <a href="https://rumble.com/v7dpoeu-if-you-hate-america-get-out-julie-donuts.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display:inline-flex;max-width:260px;">Watch on Rumble →</a>
+      <p style="color:var(--text-faint);margin-bottom:1rem;">Official Rumble version.</p>
     </div>
   </section>
 
@@ -486,6 +504,10 @@
         </div>
         <div class="gallery-carousel">
           <div class="gallery-track">
+            <div class="gallery-item">
+              <img src="backup.jpeg" alt="Official backup account" loading="lazy">
+              <div class="gallery-caption">Official Backup Account</div>
+            </div>
             <div class="gallery-item">
               <img src="https://pbs.twimg.com/media/HO17G7EXgAAoYXe.jpg" alt="Warning about fake accounts" loading="lazy">
               <div class="gallery-caption">Fake Account Warning</div>
@@ -563,64 +585,79 @@
 
         <!-- Video 1 - If You Hate America, Get Out (Rumble) -->
         <article class="video-card">
-          <div class="thumbnail" tabindex="0" role="button" aria-label="Play If You Hate America, Get Out">
-            <img src="thumbnail.png" alt="If You Hate America, Get Out thumbnail" loading="lazy">
-          </div>
-          <div class="video-box">
-            <iframe src="https://rumble.com/embed/v7dpoeu/" title="If You Hate America, Get Out - Julie Donuts on Rumble" frameborder="0" allowfullscreen allow="autoplay" loading="lazy"></iframe>
-          </div>
+          <a href="https://rumble.com/v7dpoeu-if-you-hate-america-get-out-julie-donuts.html" target="_blank" rel="noopener noreferrer" class="thumbnail-link" aria-label="Watch If You Hate America, Get Out on Rumble">
+            <div class="thumbnail">
+              <img src="thumbnail.png" alt="If You Hate America, Get Out thumbnail" loading="lazy">
+            </div>
+          </a>
           <div class="info">
             <h3>If You Hate America, Get Out</h3>
             <p>Official Rumble version.</p>
-            <a class="link" href="https://rumble.com/v7dpoeu-if-you-hate-america-get-out-julie-donuts.html" target="_blank" rel="noopener noreferrer">Watch on Rumble →</a>
           </div>
         </article>
 
         <!-- Video 2 - Truth Teller Tales Interview (YouTube) -->
         <article class="video-card">
-          <div class="thumbnail" tabindex="0" role="button" aria-label="Play Truth Teller Tales Interview">
-            <img src="https://img.youtube.com/vi/aZ0OE9xoIsQ/sddefault.jpg" alt="Truth Teller Tales Interview thumbnail" loading="lazy">
-          </div>
-          <div class="video-box">
-            <iframe src="https://www.youtube.com/embed/aZ0OE9xoIsQ?si=KPtjIwk58V8v0Q-o" title="Truth Teller Tales Interview with Julie Donuts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-          </div>
+          <a href="https://www.youtube.com/watch?v=aZ0OE9xoIsQ" target="_blank" rel="noopener noreferrer" class="thumbnail-link" aria-label="Watch Truth Teller Tales Interview on YouTube">
+            <div class="thumbnail">
+              <img src="https://img.youtube.com/vi/aZ0OE9xoIsQ/sddefault.jpg" alt="Truth Teller Tales Interview thumbnail" loading="lazy">
+            </div>
+          </a>
           <div class="info">
             <h3>Truth Teller Tales Interview</h3>
             <p>Full conversation about her journey and faith.</p>
-            <a class="link" href="https://www.youtube.com/watch?v=aZ0OE9xoIsQ" target="_blank" rel="noopener noreferrer">Watch on YouTube →</a>
           </div>
         </article>
 
-        <!-- Link Cards for X Posts -->
-        <article class="video-card link-card">
+        <!-- Video 3 - THE START – Contempt Motion (X) -->
+        <article class="video-card">
+          <a href="https://x.com/Juliedonuts/status/2085356510620574074" target="_blank" rel="noopener noreferrer" class="thumbnail-link" aria-label="View THE START – Contempt Motion on X">
+            <div class="thumbnail">
+              <img src="https://img.youtube.com/vi/aZ0OE9xoIsQ/sddefault.jpg" alt="THE START – Contempt Motion thumbnail" loading="lazy">
+            </div>
+          </a>
           <div class="info">
             <h3>THE START – Contempt Motion</h3>
             <p>Military tribunal for crimes against humanity.</p>
-            <a class="link" href="https://x.com/Juliedonuts/status/2085356510620574074" target="_blank" rel="noopener noreferrer">View on X →</a>
           </div>
         </article>
 
-        <article class="video-card link-card">
+        <!-- Video 4 - Fauci Contempt Hearing (X) -->
+        <article class="video-card">
+          <a href="https://x.com/Juliedonuts/status/2085353831181729792" target="_blank" rel="noopener noreferrer" class="thumbnail-link" aria-label="View Fauci Contempt Hearing on X">
+            <div class="thumbnail">
+              <img src="thumbnail.png" alt="Fauci Contempt Hearing thumbnail" loading="lazy">
+            </div>
+          </a>
           <div class="info">
             <h3>Fauci Contempt Hearing</h3>
             <p>"Just getting started… Down they will ALL go."</p>
-            <a class="link" href="https://x.com/Juliedonuts/status/2085353831181729792" target="_blank" rel="noopener noreferrer">View on X →</a>
           </div>
         </article>
 
-        <article class="video-card link-card">
+        <!-- Video 5 - We Are in a WAR (X) -->
+        <article class="video-card">
+          <a href="https://x.com/Juliedonuts/status/2085331177297072128" target="_blank" rel="noopener noreferrer" class="thumbnail-link" aria-label="View We Are in a WAR on X">
+            <div class="thumbnail">
+              <img src="https://img.youtube.com/vi/aZ0OE9xoIsQ/sddefault.jpg" alt="We Are in a WAR thumbnail" loading="lazy">
+            </div>
+          </a>
           <div class="info">
             <h3>We Are in a WAR</h3>
             <p>Critical thinking + prayer is essential. GOD WINS.</p>
-            <a class="link" href="https://x.com/Juliedonuts/status/2085331177297072128" target="_blank" rel="noopener noreferrer">View on X →</a>
           </div>
         </article>
 
-        <article class="video-card link-card">
+        <!-- Video 6 - America Will Never Be Communist (X) -->
+        <article class="video-card">
+          <a href="https://x.com/Juliedonuts/status/2085156072629698560" target="_blank" rel="noopener noreferrer" class="thumbnail-link" aria-label="View America Will Never Be Communist on X">
+            <div class="thumbnail">
+              <img src="thumbnail.png" alt="America Will Never Be Communist thumbnail" loading="lazy">
+            </div>
+          </a>
           <div class="info">
             <h3>America Will Never Be Communist</h3>
             <p>With President Trump and We the People.</p>
-            <a class="link" href="https://x.com/Juliedonuts/status/2085156072629698560" target="_blank" rel="noopener noreferrer">View on X →</a>
           </div>
         </article>
 
@@ -691,33 +728,6 @@
     });
   }
 
-  // Video thumbnail click-to-play functionality
-  const videoCards = document.querySelectorAll('.video-card');
-  videoCards.forEach(card => {
-    const thumbnail = card.querySelector('.thumbnail');
-    const videoBox = card.querySelector('.video-box');
-    const video = card.querySelector('video');
-    const iframe = card.querySelector('iframe');
-    
-    if (thumbnail && videoBox) {
-      const playVideo = () => {
-        card.classList.add('playing');
-        if (video) {
-          video.play().catch(e => console.log('Autoplay prevented:', e));
-        }
-        // For iframes (YouTube, Rumble), they load automatically when shown
-        // Twitter embeds load via the widgets script
-      };
-
-      thumbnail.addEventListener('click', playVideo);
-      thumbnail.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          playVideo();
-        }
-      });
-    }
-  });
 
   // Gallery carousel functionality
   const galleryCarousel = document.querySelector('.gallery-carousel');
