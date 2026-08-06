@@ -3,484 +3,839 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Julie Donuts | GOD PROVIDES • WE WIN</title>
-<meta name="description" content="Official presence of Julie Donuts — Truth Warrior, Christian, unwavering supporter of President Trump. Bringing hope, faith, and clarity in the final phase.">
+<title>Julie Donuts | God Provides • We Win</title>
+<meta name="description" content="Julie Donuts — faith, truth, and America First commentary. Follow the real @Juliedonuts.">
+<meta property="og:title" content="Julie Donuts | God Provides • We Win">
+<meta property="og:description" content="Faith, truth, and America First commentary from Julie Donuts.">
+<meta property="og:image" content="https://pbs.twimg.com/profile_images/1671228892328099854/BZAFh_Zm.jpg">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://juliedonuts.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Juliedonuts">
+<meta name="twitter:creator" content="@Juliedonuts">
+<link rel="icon" href="donut.png">
+<link rel="canonical" href="https://juliedonuts.com">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Julie Donuts",
+  "alternateName": "@Juliedonuts",
+  "description": "Faith-driven voice bringing truth, clarity, and hope. America First commentator.",
+  "url": "https://juliedonuts.com",
+  "sameAs": [
+    "https://x.com/Juliedonuts",
+    "https://truthsocial.com/@Luvsmileys3",
+    "https://juliedonuts.substack.com",
+    "https://rumble.com/c/JulieDonuts"
+  ],
+  "image": "https://pbs.twimg.com/profile_images/1671228892328099854/BZAFh_Zm.jpg",
+  "knowsAbout": ["Faith", "Politics", "America First", "Truth", "Christianity"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Outfit:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
-  :root {
-    --navy: #0a1628;
-    --navy-light: #132238;
-    --crimson: #c41e3a;
-    --gold: #d4af37;
-    --cream: #f8f5f0;
-    --white: #ffffff;
-    --text: #1a1a1a;
-    --muted: #5a6577;
+  :root{
+    --pink:#ff2d95;
+    --pink-glow:rgba(255,45,149,0.45);
+    --pink-subtle:rgba(255,45,149,0.12);
+    --gold:#ffc857;
+    --gold-glow:rgba(255,200,87,0.35);
+    --deep:#0a0a12;
+    --navy:#12122a;
+    --purple:#1a1235;
+    --purple-light:#251a45;
+    --line:rgba(255,45,149,0.22);
+    --line-gold:rgba(255,200,87,0.18);
+    --text:#eee9f5;
+    --text-dim:rgba(238,233,245,0.62);
+    --text-faint:rgba(238,233,245,0.4);
+    --font-display:'Fraunces', Georgia, serif;
+    --font-body:'Outfit', system-ui, sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+    --ease-out:cubic-bezier(0.215, 0.61, 0.355, 1);
+    --ease-in-out:cubic-bezier(0.645, 0.045, 0.355, 1);
+    --shadow-sm:0 2px 8px rgba(0,0,0,0.25);
+    --shadow-md:0 8px 26px rgba(0,0,0,0.35);
+    --shadow-lg:0 20px 55px rgba(0,0,0,0.45);
+    --shadow-pink:0 8px 26px var(--pink-glow);
+    --shadow-gold:0 8px 26px var(--gold-glow);
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.6;
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--font-body);
+    background:var(--deep);
+    color:var(--text);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    overflow-x:hidden;
+    text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%;display:block;height:auto;}
+  a{color:inherit;}
+  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px;}
+
+  .wrap{max-width:1200px;margin:0 auto;padding:0 1.6rem;}
+
+  .skip-link{
+    position:absolute;top:-3rem;left:1rem;z-index:2000;
+    background:var(--pink);color:#fff;padding:.6rem 1rem;border-radius:8px;
+    font-weight:700;text-decoration:none;transition:top .2s;
+  }
+  .skip-link:focus{top:1rem;}
+
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:rgba(9,9,16,0.92);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--line);
+    transition:border-color 0.3s ease;
+  }
+  nav:hover{border-color:rgba(255,45,149,0.35);}
+  .nav-inner{
+    max-width:1200px;margin:0 auto;padding:0.9rem 1.6rem;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .logo{
+    font-family:var(--font-display);font-weight:700;font-size:1.35rem;
+    color:#fff;text-decoration:none;display:flex;align-items:center;gap:0.6rem;
+    transition:transform 0.3s var(--ease-out);
+  }
+  .logo:hover{transform:scale(1.02);}
+  .logo img{width:36px;height:36px;object-fit:contain;filter:drop-shadow(0 0 10px var(--pink-glow));transition:filter 0.3s ease;}
+  .logo:hover img{filter:drop-shadow(0 0 14px var(--pink-glow));}
+  .logo em{color:var(--pink);font-style:normal;}
+  .nav-links{display:none;}
+  .nav-links a{font-size:0.94rem;font-weight:500;text-decoration:none;color:var(--text-dim);transition:color 0.2s ease, transform 0.2s ease;position:relative;}
+  .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--pink);transition:width 0.3s var(--ease-out);}
+  .nav-links a:hover{color:var(--pink);transform:translateY(-1px);}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{
+    display:none;font-family:var(--font-mono);font-size:0.8rem;font-weight:600;
+    letter-spacing:0.5px;text-decoration:none;color:var(--deep);
+    background:var(--gold);padding:0.55rem 1rem;border-radius:22px;
+    transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:var(--shadow-gold);background:#ffd06a;}
+
+  .ticker{
+    position:fixed;top:59px;left:0;right:0;z-index:999;
+    background:linear-gradient(90deg, var(--purple), var(--purple-light), var(--purple));
+    border-bottom:1px solid var(--line);
+    overflow:hidden;white-space:nowrap;height:36px;
+  }
+  .ticker-track{
+    display:inline-flex;align-items:center;height:34px;
+    animation:scroll-left 32s linear infinite;
+  }
+  .ticker-track span{
+    font-family:var(--font-mono);font-size:0.74rem;letter-spacing:0.09em;
+    color:var(--text-dim);padding:0 2.2rem;text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:0.65rem;
+  }
+  .ticker-track span::before{
+    content:'';width:6px;height:6px;border-radius:50%;
+    background:var(--pink);box-shadow:0 0 8px var(--pink-glow);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.7;transform:scale(0.9);}}
+  @keyframes scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media (prefers-reduced-motion:reduce){.ticker-track{animation:none;}}
+
+  .hero{
+    min-height:100svh;
+    background:
+      radial-gradient(ellipse 1000px 550px at 75% -5%, rgba(255,45,149,0.28), transparent 60%),
+      radial-gradient(ellipse 800px 650px at 15% 100%, rgba(255,200,87,0.1), transparent 60%),
+      radial-gradient(ellipse 600px 400px at 50% 50%, rgba(26,18,53,0.4), transparent 70%),
+      var(--deep);
+    padding:8rem 1.6rem 4rem;
+    display:flex;align-items:center;
+    position:relative;
+  }
+  .hero::before{
+    content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+    background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,45,149,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity:0.4;pointer-events:none;
+    transform:translateY(0);
+    transition:transform 0.1s linear;
+  }
+  .hero-inner{
+    max-width:1120px;margin:0 auto;width:100%;
+    display:flex;flex-direction:column;align-items:center;text-align:center;gap:2.1rem;
+  }
+  .eyebrow{
+    font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--gold);
+    display:flex;align-items:center;gap:0.6rem;
+  }
+  .eyebrow::before,.eyebrow::after{content:'';height:1px;width:22px;background:var(--gold);opacity:.6;}
+  .profile-frame{
+    width:220px;height:220px;border-radius:50%;overflow:hidden;
+    border:4px solid var(--pink);box-shadow:0 0 0 10px rgba(255,45,149,0.1), 0 25px 60px rgba(0,0,0,0.55), 0 0 40px var(--pink-glow);
+    transition:transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+  }
+  .profile-frame:hover{transform:scale(1.03);box-shadow:0 0 0 12px rgba(255,45,149,0.15), 0 30px 70px rgba(0,0,0,0.6), 0 0 50px var(--pink-glow);}
+  .profile-frame img{width:100%;height:100%;object-fit:cover;}
+  .hero-text h1{
+    font-family:var(--font-display);font-weight:700;
+    font-size:clamp(2.8rem, 11vw, 4.8rem);line-height:0.96;letter-spacing:-0.8px;
+    background:linear-gradient(135deg, #fff 0%, rgba(238,233,245,0.9) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+  }
+  .hero-text h1 em{font-style:italic;color:var(--pink);-webkit-text-fill-color:var(--pink);text-shadow:0 0 30px var(--pink-glow);}
+  .tagline{font-size:1.05rem;font-weight:600;color:var(--text-dim);margin-top:1rem;letter-spacing:0.02em;}
+  .tagline .sep{color:var(--pink);margin:0 0.6rem;animation:sep-pulse 3s ease-in-out infinite;}
+  @keyframes sep-pulse{0%,100%{opacity:1;}50%{opacity:0.5;}}
+  .hero-bio{font-size:1.08rem;color:var(--text-dim);max-width:480px;margin-top:0.4rem;}
+  .cta-group{display:flex;flex-direction:column;gap:0.85rem;width:100%;max-width:320px;margin-top:0.6rem;}
+  .btn{
+    display:flex;align-items:center;justify-content:center;gap:0.6rem;
+    padding:1.05rem 1.6rem;border-radius:14px;font-weight:700;font-size:1rem;
+    text-decoration:none;transition:transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), background 0.25s ease;
+    position:relative;overflow:hidden;
+  }
+  .btn::before{
+    content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition:left 0.5s ease;
+  }
+  .btn:hover::before{left:100%;}
+  .btn-primary{background:linear-gradient(135deg, var(--pink), #ff47a8);color:#fff;box-shadow:var(--shadow-pink);}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(255,45,149,0.55);}
+  .btn-outline{border:1.5px solid var(--pink);color:var(--pink);background:transparent;}
+  .btn-outline:hover{background:var(--pink-subtle);transform:translateY(-3px);box-shadow:0 8px 20px rgba(255,45,149,0.2);}
+
+  section{padding:5rem 1.6rem;}
+  .section-head{text-align:center;margin-bottom:3rem;}
+  .section-head .eyebrow{justify-content:center;margin-bottom:1rem;}
+  .section-title{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem, 5.5vw, 2.7rem);letter-spacing:-0.3px;}
+  .section-title em{font-style:italic;color:var(--pink);}
+  .section-sub{color:var(--text-faint);margin-top:0.6rem;font-size:1rem;letter-spacing:0.02em;}
+
+  .featured{background:linear-gradient(180deg, var(--purple), var(--navy));border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .video-box{
+    max-width:860px;margin:0 auto;
+    border-radius:18px;overflow:hidden;background:#000;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow-lg);
+    transition:transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+  }
+  .video-box:hover{transform:translateY(-4px);box-shadow:0 25px 65px rgba(0,0,0,0.5);}
+  .video-box video,.video-box iframe{width:100%;aspect-ratio:16/9;display:block;border:0;}
+  .featured-actions{text-align:center;margin-top:1.8rem;}
+
+  .about{background:linear-gradient(180deg, var(--deep), var(--navy));}
+  .about-grid{display:flex;flex-direction:column;gap:2.5rem;}
+  .about-img{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-lg);transition:transform 0.3s var(--ease-out);}
+  .about-img:hover{transform:scale(1.02);}
+  .about-text p{margin-bottom:1.3rem;font-size:1.06rem;color:rgba(238,233,245,0.86);line-height:1.8;}
+  .about-text strong{color:var(--pink);font-weight:600;}
+  blockquote{
+    font-family:var(--font-display);font-style:italic;font-size:1.18rem;
+    color:var(--text-dim);border-left:3px solid var(--pink);padding-left:1.2rem;margin-top:1.8rem;
+    line-height:1.6;position:relative;
+  }
+  blockquote::before{
+    content:'"';position:absolute;top:-0.3rem;left:-0.3rem;
+    font-size:3rem;color:var(--pink);opacity:0.3;font-family:Georgia,serif;
+  }
+  .gallery-section{margin-top:4rem;}
+  .gallery-head{text-align:center;margin-bottom:2rem;}
+  .gallery-head .eyebrow{justify-content:center;margin-bottom:0.6rem;}
+  .gallery-head h3{font-family:var(--font-display);font-size:1.5rem;font-weight:600;letter-spacing:-0.2px;}
+  .gallery-head h3 em{font-style:italic;color:var(--pink);}
+  .gallery-carousel{position:relative;overflow:hidden;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow-md);}
+  .gallery-track{display:flex;transition:transform 0.5s var(--ease-out);cursor:grab;}
+  .gallery-track:active{cursor:grabbing;}
+  .gallery-item{flex:0 0 100%;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#000;}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s var(--ease-out), opacity 0.3s ease;}
+  .gallery-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent, rgba(10,10,18,0.95));padding:1.2rem 1rem;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.08em;transform:translateY(100%);transition:transform 0.3s var(--ease-out);}
+  .gallery-item:hover .gallery-caption{transform:translateY(0);}
+  .gallery-nav{display:flex;justify-content:center;align-items:center;gap:1rem;margin-top:1.5rem;}
+  .gallery-nav-btn{
+    width:44px;height:44px;border-radius:50%;background:var(--purple);border:1px solid var(--line);
+    color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;
+    transition:all 0.3s var(--ease-out);font-size:1.2rem;
+  }
+  .gallery-nav-btn:hover{background:var(--pink);border-color:var(--pink);color:#fff;transform:scale(1.1);}
+  .gallery-nav-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+  .gallery-dots{display:flex;gap:0.5rem;align-items:center;}
+  .gallery-dot{width:10px;height:10px;border-radius:50%;background:var(--line);border:none;cursor:pointer;transition:all 0.3s ease;}
+  .gallery-dot.active{background:var(--pink);transform:scale(1.2);}
+  .gallery-dot:hover{background:rgba(255,45,149,0.6);}
+
+  .posts{background:var(--navy);}
+  .posts-grid{display:flex;flex-direction:column;gap:1.4rem;}
+  .post-card{background:rgba(255,255,255,0.035);border:1px solid var(--line);border-radius:16px;padding:1.6rem;transition:transform 0.3s var(--ease-out), border-color 0.3s ease, background 0.3s ease;}
+  .post-card:hover{transform:translateY(-4px);border-color:rgba(255,45,149,0.4);background:rgba(255,255,255,0.045);}
+  .post-card .meta{font-family:var(--font-mono);font-size:0.74rem;color:var(--gold);margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.05em;}
+  .post-card p{font-size:1rem;margin-bottom:1.2rem;color:rgba(238,233,245,0.85);line-height:1.7;}
+  .post-card a{color:var(--pink);font-weight:700;text-decoration:none;font-size:0.94rem;transition:color 0.2s ease;}
+  .post-card a:hover{color:#ff47a8;}
+
+  .videos-grid{display:flex; flex-direction:column; gap:1.8rem;}
+  .video-card{
+    background:linear-gradient(160deg, var(--purple), var(--navy));
+    border:1px solid var(--line); border-radius:18px; overflow:hidden;
+    transition:transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+    display:flex; flex-direction:column;
+  }
+  .video-card:hover{transform:translateY(-5px); box-shadow:var(--shadow-md);}
+  .video-card .thumbnail{
+    position:relative; width:100%; aspect-ratio:16/9; overflow:hidden;
+    background:#000; cursor:pointer;
+  }
+  .video-card .thumbnail img{
+    width:100%; height:100%; object-fit:cover;
+    transition:transform 0.4s var(--ease-out), opacity 0.3s ease;
+  }
+  .video-card .thumbnail:hover img{transform:scale(1.05); opacity:0.9;}
+  .video-card .thumbnail::after{
+    content:'';position:absolute;top:50%;left:50%;
+    width:60px;height:60px;border-radius:50%;
+    background:rgba(255,45,149,0.9);
+    transform:translate(-50%, -50%);
+    display:flex;align-items:center;justify-content:center;
+    opacity:0;transition:opacity 0.3s ease;
+    box-shadow:0 0 20px var(--pink-glow);
+  }
+  .video-card .thumbnail:hover::after{opacity:1;}
+  .video-card .thumbnail::before{
+    content:'▶';position:absolute;top:50%;left:50%;
+    transform:translate(-50%, -50%);color:#fff;font-size:1.5rem;
+    opacity:0;transition:opacity 0.3s ease;z-index:1;
+  }
+  .video-card .thumbnail:hover::before{opacity:1;}
+  .video-card .video-box{border:0; box-shadow:none; border-radius:0; display:none;}
+  .video-card.playing .thumbnail{display:none;}
+  .video-card.playing .video-box{display:block;}
+  .video-card .info{padding:1.5rem;}
+  .video-card h3{font-family:var(--font-display); font-size:1.18rem; font-weight:600; margin-bottom:0.5rem; letter-spacing:-0.2px;}
+  .video-card p{font-size:0.97rem; color:var(--text-faint); margin-bottom:1rem; line-height:1.6;}
+  .video-card a.link{color:var(--pink); font-weight:700; text-decoration:none; font-size:0.92rem; transition:color 0.2s ease;}
+  .video-card a.link:hover{color:#ff47a8;}
+
+  .connect{
+    background:radial-gradient(ellipse 900px 550px at 50% 0%, rgba(255,45,149,0.2), transparent 65%), var(--deep);
+    text-align:center;border-top:1px solid var(--line);
+  }
+  .connect-note{color:var(--text-faint);max-width:440px;margin:0 auto 2.2rem;font-size:1.02rem;}
+  .social-links{display:flex;flex-direction:column;gap:0.9rem;max-width:340px;margin:0 auto;}
+  .social-btn{
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,45,149,0.12);border:1.5px solid var(--pink);
+    color:#fff;padding:1.05rem;border-radius:14px;text-decoration:none;font-weight:700;
+    transition:transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), background 0.25s ease;
+  }
+  .social-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-pink);background:rgba(255,45,149,0.18);}
+
+  footer{background:#050509;color:var(--text-faint);text-align:center;padding:2.8rem 1.6rem;font-size:0.9rem;border-top:1px solid var(--line);}
+  footer p{margin-bottom:0.6rem;}
+  footer a{color:var(--pink);text-decoration:none;font-weight:600;transition:color 0.2s ease;}
+  footer a:hover{color:#ff47a8;}
+
+  .back-to-top{
+    position:fixed;bottom:2rem;right:2rem;z-index:900;
+    width:48px;height:48px;border-radius:50%;
+    background:var(--pink);color:#fff;border:none;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow-pink);opacity:0;visibility:hidden;
+    transform:translateY(10px);transition:all 0.3s var(--ease-out);
+    font-size:1.3rem;
+  }
+  .back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0);}
+  .back-to-top:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(255,45,149,0.55);background:#ff47a8;}
+  .back-to-top:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+
+  @media (max-width:767px){
+    .back-to-top{bottom:1.5rem;right:1.5rem;width:44px;height:44px;font-size:1.2rem;}
   }
 
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
-    background: rgba(10, 22, 40, 0.95);
-    backdrop-filter: blur(12px);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-  }
-  .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--white);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .logo span { color: var(--gold); }
-  .nav-links { display: flex; gap: 2rem; }
-  .nav-links a {
-    color: rgba(255,255,255,0.85);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--gold); }
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);}
+  .reveal.in{opacity:1;transform:none;}
+  .reveal:nth-child(1){transition-delay:0s;}
+  .reveal:nth-child(2){transition-delay:0.1s;}
+  .reveal:nth-child(3){transition-delay:0.2s;}
+  .reveal:nth-child(4){transition-delay:0.3s;}
+  .reveal:nth-child(5){transition-delay:0.4s;}
+  .reveal:nth-child(6){transition-delay:0.5s;}
 
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--navy) 0%, #0f2440 60%, #1a0a14 100%);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    padding: 8rem 2rem 4rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('https://pbs.twimg.com/profile_banners/1671220869236916231/1772632024') center/cover;
-    opacity: 0.12;
-    filter: blur(2px);
-  }
-  .hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-  }
-  .hero-text h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 5vw, 4.2rem);
-    line-height: 1.1;
-    margin-bottom: 1rem;
-  }
-  .hero-text h1 span { color: var(--gold); }
-  .tagline {
-    font-size: 1.35rem;
-    color: var(--gold);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.5px;
-  }
-  .hero-bio {
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.85);
-    margin-bottom: 2.5rem;
-    max-width: 520px;
-  }
-  .cta-group { display: flex; flex-wrap: wrap; gap: 1rem; }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.95rem 1.8rem;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.25s;
-    font-size: 1rem;
-  }
-  .btn-primary {
-    background: var(--crimson);
-    color: white;
-  }
-  .btn-primary:hover {
-    background: #a81830;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(196, 30, 58, 0.35);
-  }
-  .btn-outline {
-    border: 2px solid var(--gold);
-    color: var(--gold);
-  }
-  .btn-outline:hover {
-    background: var(--gold);
-    color: var(--navy);
-  }
-  .hero-image {
-    display: flex;
-    justify-content: center;
-  }
-  .profile-frame {
-    width: 380px;
-    height: 380px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 6px solid var(--gold);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
-    position: relative;
-  }
-  .profile-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+    .reveal:nth-child(n){transition-delay:0s;}
   }
 
-  /* SECTIONS */
-  section {
-    padding: 6rem 2rem;
-  }
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
-    text-align: center;
-    margin-bottom: 0.75rem;
-    color: var(--navy);
-  }
-  .section-sub {
-    text-align: center;
-    color: var(--muted);
-    margin-bottom: 3.5rem;
-    font-size: 1.1rem;
-  }
-
-  /* ABOUT */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 3.5rem;
-    align-items: center;
-  }
-  .about-img {
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-  }
-  .about-img img {
-    width: 100%;
-    display: block;
-  }
-  .about-text p {
-    margin-bottom: 1.25rem;
-    font-size: 1.08rem;
-    color: #333;
-  }
-  .about-text strong { color: var(--navy); }
-
-  /* FEATURED POSTS */
-  .posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  .post-card {
-    background: white;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-    transition: transform 0.25s, box-shadow 0.25s;
-    border: 1px solid rgba(0,0,0,0.04);
-  }
-  .post-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.1);
-  }
-  .post-card .content {
-    padding: 1.6rem;
-  }
-  .post-card .meta {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-bottom: 0.8rem;
-  }
-  .post-card p {
-    font-size: 0.98rem;
-    margin-bottom: 1.2rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .post-card a {
-    color: var(--crimson);
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .post-card a:hover { text-decoration: underline; }
-
-  /* VIDEOS */
-  .videos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.8rem;
-  }
-  .video-card {
-    background: var(--navy);
-    color: white;
-    border-radius: 12px;
-    padding: 1.8rem;
-    transition: transform 0.2s;
-  }
-  .video-card:hover { transform: translateY(-4px); }
-  .video-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.6rem;
-    color: var(--gold);
-  }
-  .video-card p {
-    font-size: 0.92rem;
-    color: rgba(255,255,255,0.75);
-    margin-bottom: 1.2rem;
-  }
-  .video-card a {
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 2px solid var(--gold);
-    padding-bottom: 2px;
-  }
-
-  /* CONNECT */
-  .connect {
-    background: var(--navy);
-    color: white;
-    text-align: center;
-  }
-  .connect .section-title { color: white; }
-  .social-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-  }
-  .social-btn {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(212,175,55,0.4);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.25s;
-    min-width: 180px;
-  }
-  .social-btn:hover {
-    background: var(--gold);
-    color: var(--navy);
-    border-color: var(--gold);
-  }
-
-  /* FOOTER */
-  footer {
-    background: #060e18;
-    color: rgba(255,255,255,0.6);
-    text-align: center;
-    padding: 2.5rem 2rem;
-    font-size: 0.9rem;
-  }
-  footer a { color: var(--gold); text-decoration: none; }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .hero-content { grid-template-columns: 1fr; text-align: center; }
-    .hero-image { order: -1; }
-    .profile-frame { width: 280px; height: 280px; }
-    .about-grid { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-    .cta-group { justify-content: center; }
+  @media (min-width:768px){
+    .nav-links{display:flex;gap:2.2rem;}
+    .nav-cta{display:inline-flex;}
+    .hero-inner{flex-direction:row;text-align:left;gap:3.5rem;}
+    .profile-frame{width:300px;height:300px;}
+    .cta-group{flex-direction:row;max-width:none;}
+    .btn{min-width:180px;}
+    .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:3.5rem;align-items:center;}
+    .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;}
+    .videos-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.8rem;}
+    .social-links{flex-direction:row;flex-wrap:wrap;justify-content:center;max-width:none;gap:1rem;}
+    .social-btn{min-width:200px;}
+    .gallery-nav-btn{width:40px;height:40px;font-size:1.1rem;}
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="logo">🇺🇸🍩 <span>JULIE DONUTS</span></a>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#posts">Posts</a>
-    <a href="#videos">Videos</a>
-    <a href="#connect">Connect</a>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<nav aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a href="#" class="logo" aria-label="Julie Donuts Home">
+      <img src="donut.png" alt="" role="presentation">
+      JULIE <em>DONUTS</em>
+    </a>
+    <div class="nav-links" role="navigation" aria-label="Page sections">
+      <a href="#about">About</a>
+      <a href="#posts">Posts</a>
+      <a href="#videos">Videos</a>
+      <a href="#connect">Connect</a>
+    </div>
+    <a href="https://x.com/Juliedonuts" target="_blank" rel="noopener noreferrer" class="nav-cta" aria-label="Follow Julie Donuts on X (Twitter)">Follow on X</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>Julie <span>Donuts</span></h1>
-      <p class="tagline">GOD PROVIDES!! • WE WIN.</p>
-      <p class="hero-bio">
-        Truth warrior. Follower of Jesus Christ. Unwavering supporter of President Donald J. Trump. 
-        Bringing hope, clarity, and faith in the final phase of this spiritual and informational battle.
-      </p>
-      <div class="cta-group">
-        <a href="https://x.com/Juliedonuts" target="_blank" class="btn btn-primary">Follow on X</a>
-        <a href="https://juliedonuts.substack.com" target="_blank" class="btn btn-outline">Read on Substack</a>
-      </div>
-    </div>
-    <div class="hero-image">
+<div class="ticker" role="marquee" aria-label="Scrolling messages: God provides, We win, Trust the plan, Faith over fear">
+  <div class="ticker-track" aria-hidden="true">
+    <span>God provides</span><span>We win</span><span>Trust the plan</span><span>Faith over fear</span>
+    <span>God provides</span><span>We win</span><span>Trust the plan</span><span>Faith over fear</span>
+  </div>
+</div>
+
+<main id="main">
+
+  <header class="hero">
+    <div class="hero-inner">
       <div class="profile-frame">
-        <img src="https://pbs.twimg.com/profile_images/1671228892328099854/BZAFh_Zm.jpg" alt="Julie Donuts">
+        <img src="https://pbs.twimg.com/profile_images/1671228892328099854/BZAFh_Zm.jpg" alt="Julie Donuts profile photo" loading="eager" fetchpriority="high">
       </div>
-    </div>
-  </div>
-</header>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <h2 class="section-title">About Julie</h2>
-    <p class="section-sub">Born for this time</p>
-    <div class="about-grid">
-      <div class="about-img">
-        <img src="https://pbs.twimg.com/media/HK99KkIbUAAzVmb.jpg" alt="Julie Donuts meeting supporters">
-      </div>
-      <div class="about-text">
-        <p>
-          Julie Donuts is a bold, faith-filled voice reaching hundreds of thousands with a simple, powerful message: 
-          <strong>This is God’s war. We already won. Trust the plan. Trust the President. Trust Jesus Christ.</strong>
-        </p>
-        <p>
-          Born and raised in Cleveland, Ohio, she spent years working hard, raising a family, and waking up to the reality of the spiritual and geopolitical battle unfolding around us. 
-          What began as quiet research became a public calling after her posts caught the attention of President Trump himself (three times).
-        </p>
-        <p>
-          She does not sell anything. She does not claim special intel. Her only goals are to bring light into darkness, hope into fear, and as many people as possible to Christ — while standing firmly behind the man she believes God has anointed for this hour.
-        </p>
-        <p style="font-style: italic; color: var(--muted);">
-          “I am no one special. I’m just a complete and total lover of my Lord and Savior Jesus Christ… THE BEST IS YET TO COME.”
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURED POSTS -->
-<section id="posts" style="background: #f0ebe3;">
-  <div class="container">
-    <h2 class="section-title">Recent Highlights</h2>
-    <p class="section-sub">Selected high-impact posts</p>
-    <div class="posts-grid">
-      <div class="post-card">
-        <div class="content">
-          <div class="meta">August 6, 2026 • 3.9K likes</div>
-          <p>THE START: 💥💥💥 MOTION FOR CONTEMPT IS A HELL YEAH! Guys this is just the beginning. MILITARY TRIBUNAL FOR CRIMES AGAINST HUMANITY.</p>
-          <a href="https://x.com/Juliedonuts/status/2085356510620574074" target="_blank">View post with video →</a>
-        </div>
-      </div>
-      <div class="post-card">
-        <div class="content">
-          <div class="meta">August 5, 2026 • 5.7K likes</div>
-          <p>President Trump Post: The EBS signal flashes during this broadcast. This is not an accident. It’s seeding. 👀 IYKYK. 🐸 NO FEAR. BE PREPARED. PRAY.</p>
-          <a href="https://x.com/Juliedonuts/status/2084985823263342907" target="_blank">View post with video →</a>
-        </div>
-      </div>
-      <div class="post-card">
-        <div class="content">
-          <div class="meta">August 3, 2026</div>
-          <p>As we move forward with this Informational and Spiritual battle… We do not have to agree on everything. Focus on free & fair elections and the fraudulent financial system. Leave egos at the door. WE THE PEOPLE!</p>
-          <a href="https://x.com/Juliedonuts/status/2084274271828787640" target="_blank">Read full post →</a>
+      <div class="hero-text">
+        <p class="eyebrow">Faith · Truth · America First</p>
+        <h1>Julie <em>Donuts</em></h1>
+        <p class="tagline">GOD PROVIDES<span class="sep" aria-hidden="true">•</span>WE WIN<span class="sep" aria-hidden="true">•</span>DONUT DROPS</p>
+        <p class="hero-bio">Truth warrior. Follower of Jesus. Unapologetic American. Bringing bold faith, clarity, and hope.</p>
+        <div class="cta-group">
+          <a href="https://x.com/Juliedonuts" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Follow Julie Donuts on X (Twitter)">Follow on X</a>
+          <a href="#videos" class="btn btn-outline">Watch Videos</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- VIDEOS -->
-<section id="videos">
-  <div class="container">
-    <h2 class="section-title">Videos & Interviews</h2>
-    <p class="section-sub">Watch Julie’s shares and conversations</p>
-    <div class="videos-grid">
-      <div class="video-card">
-        <h3>Fauci Contempt Hearing</h3>
-        <p>Full context + Julie’s commentary on accountability beginning.</p>
-        <a href="https://x.com/Juliedonuts/status/2085354358120599604" target="_blank">Watch on X →</a>
+  <section class="featured reveal" aria-labelledby="featured-title">
+    <div class="section-head">
+      <p class="eyebrow">Featured</p>
+      <h2 id="featured-title" class="section-title">If You Hate America, <em>Get Out</em></h2>
+    </div>
+    <div class="video-box">
+      <video controls playsinline preload="metadata" poster="https://pbs.twimg.com/amplify_video_thumb/2084652422417231872/img/DokV3OPXFDr78egd.jpg">
+        <source src="https://video.twimg.com/amplify_video/2084652422417231872/vid/avc1/1280x720/KzGdg_56D7vhWB0Y.mp4" type="video/mp4">
+        Your browser doesn't support embedded video. <a href="https://rumble.com/v7dpoeu-if-you-hate-america-get-out-julie-donuts.html" target="_blank" rel="noopener noreferrer">Watch on Rumble</a>.
+      </video>
+    </div>
+    <div class="featured-actions">
+      <a href="https://rumble.com/v7dpoeu-if-you-hate-america-get-out-julie-donuts.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display:inline-flex;max-width:260px;">Watch on Rumble →</a>
+    </div>
+  </section>
+
+  <section id="about" class="about reveal" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title" class="section-title">Born for <em>this time</em></h2>
       </div>
-      <div class="video-card">
-        <h3>We Are in a War</h3>
-        <p>Critical thinking + prayer essential. God’s Army.</p>
-        <a href="https://x.com/Juliedonuts/status/2085331224659157260" target="_blank">Watch on X →</a>
+      <div class="about-grid">
+        <div class="about-img">
+          <img src="https://pbs.twimg.com/media/HK99KkIbUAAzVmb.jpg" alt="Julie Donuts speaking to supporters" loading="lazy">
+        </div>
+        <div class="about-text">
+          <p>Julie Donuts is a bold, faith-driven voice with one clear message: <strong>this is God's war — we already won. Trust the President. Trust Jesus Christ.</strong></p>
+          <p>From Cleveland, Ohio to the digital battlefield, she brings unfiltered truth and spiritual fire. Her posts have been amplified by President Trump three times.</p>
+          <blockquote>"I am no one special. I'm just a complete and total lover of my Lord and Savior… the best is yet to come."</blockquote>
+        </div>
       </div>
-      <div class="video-card">
-        <h3>America Will Never Be Communist</h3>
-        <p>With President Trump and We the People.</p>
-        <a href="https://x.com/Juliedonuts/status/2085156184617558410" target="_blank">Watch on X →</a>
-      </div>
-      <div class="video-card">
-        <h3>Full Interview – Truth Teller Tales</h3>
-        <p>Deep conversation about her journey, faith, and what’s coming (June 2026).</p>
-        <a href="https://www.youtube.com/watch?v=aZ0OE9xoIsQ" target="_blank">Watch on YouTube →</a>
+      
+      <!-- Image Gallery -->
+      <div class="gallery-section">
+        <div class="gallery-head">
+          <p class="eyebrow">Quick Info</p>
+          <h3>Key <em>Moments</em></h3>
+        </div>
+        <div class="gallery-carousel">
+          <div class="gallery-track">
+            <div class="gallery-item">
+              <img src="https://pbs.twimg.com/media/HO17G7EXgAAoYXe.jpg" alt="Warning about fake accounts" loading="lazy">
+              <div class="gallery-caption">Fake Account Warning</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://pbs.twimg.com/media/HOzUYK0WgAAVBiP.jpg" alt="Branded text post" loading="lazy">
+              <div class="gallery-caption">Branded Message</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://pbs.twimg.com/media/HO9bct-XwAAawDy.jpg" alt="EBS post" loading="lazy">
+              <div class="gallery-caption">EBS Alert</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://pbs.twimg.com/media/HO7RhSeWgAAgnlm.jpg" alt="Important update" loading="lazy">
+              <div class="gallery-caption">Key Update</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://pbs.twimg.com/media/HO6vFxrWcAAX16E.jpg" alt="Message to followers" loading="lazy">
+              <div class="gallery-caption">Message</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://pbs.twimg.com/media/HPAsy5TWwAEcnbI.jpg" alt="Critical information" loading="lazy">
+              <div class="gallery-caption">Critical Info</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://pbs.twimg.com/media/HOwAuz8XIAAhsC_.jpg" alt="Important announcement" loading="lazy">
+              <div class="gallery-caption">Announcement</div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-nav">
+          <button class="gallery-nav-btn prev" aria-label="Previous image">←</button>
+          <div class="gallery-dots"></div>
+          <button class="gallery-nav-btn next" aria-label="Next image">→</button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONNECT -->
-<section id="connect" class="connect">
-  <div class="container">
-    <h2 class="section-title">Stay Connected</h2>
-    <p style="color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto 1rem;">
-      Primary account only: <strong>@Juliedonuts</strong> on X. All others are frauds.
-    </p>
-    <div class="social-links">
-      <a href="https://x.com/Juliedonuts" target="_blank" class="social-btn">𝕏 @Juliedonuts</a>
-      <a href="https://juliedonuts.substack.com" target="_blank" class="social-btn">Substack</a>
-      <a href="https://truthsocial.com/@Luvsmileys3" target="_blank" class="social-btn">Truth Social</a>
-      <a href="https://www.youtube.com/watch?v=aZ0OE9xoIsQ" target="_blank" class="social-btn">YouTube Interview</a>
+  <section id="posts" class="posts reveal" aria-labelledby="posts-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Highlights</p>
+        <h2 id="posts-title" class="section-title">Latest <em>posts</em></h2>
+      </div>
+      <div class="posts-grid">
+        <article class="post-card">
+          <div class="meta">Aug 6, 2026 · 4.5K+ likes</div>
+          <p>THE START: Motion for contempt is a hell yeah! Military tribunal for crimes against humanity.</p>
+          <a href="https://x.com/Juliedonuts/status/2085356510620574074" target="_blank" rel="noopener noreferrer" aria-label="View post about THE START: Motion for contempt on X">View post →</a>
+        </article>
+        <article class="post-card">
+          <div class="meta">Aug 5, 2026 · 5.7K likes</div>
+          <p>The EBS signal flashes… this is not an accident. It's seeding. NO FEAR. BE PREPARED. PRAY.</p>
+          <a href="https://x.com/Juliedonuts/status/2084985823263342907" target="_blank" rel="noopener noreferrer" aria-label="View post about EBS signal on X">View post →</a>
+        </article>
+        <article class="post-card">
+          <div class="meta">Aug 4, 2026</div>
+          <p>If You Hate America, GET OUT! — her most powerful message.</p>
+          <a href="https://rumble.com/v7dpoeu-if-you-hate-america-get-out-julie-donuts.html" target="_blank" rel="noopener noreferrer" aria-label="Watch If You Hate America, GET OUT video on Rumble">Watch →</a>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
+  <!-- EXPANDED VIDEOS SECTION -->
+  <section id="videos" class="reveal" aria-labelledby="videos-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Watch</p>
+        <h2 id="videos-title" class="section-title">More <em>Videos</em></h2>
+        <p class="section-sub">Rumble • X</p>
+      </div>
+      <div class="videos-grid">
+
+        <!-- Video 1 - If You Hate America, Get Out -->
+        <article class="video-card" data-video="https://video.twimg.com/amplify_video/2084652422417231872/vid/avc1/1280x720/KzGdg_56D7vhWB0Y.mp4">
+          <div class="thumbnail" tabindex="0" role="button" aria-label="Play If You Hate America, Get Out">
+            <img src="thumbnail.png" alt="If You Hate America, Get Out thumbnail" loading="lazy">
+          </div>
+          <div class="video-box">
+            <video controls playsinline preload="none">
+              <source src="https://video.twimg.com/amplify_video/2084652422417231872/vid/avc1/1280x720/KzGdg_56D7vhWB0Y.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="info">
+            <h3>If You Hate America, Get Out</h3>
+            <p>Official Rumble version.</p>
+          </div>
+        </article>
+
+        <!-- Video 2 - THE START – Contempt Motion -->
+        <article class="video-card" data-video="https://video.twimg.com/amplify_video/2085355593347346432/vid/avc1/1280x720/ssscn4tdkFqCmSdR.mp4">
+          <div class="thumbnail" tabindex="0" role="button" aria-label="Play THE START – Contempt Motion">
+            <img src="https://img.youtube.com/vi/aZ0OE9xoIsQ/sddefault.jpg" alt="THE START – Contempt Motion thumbnail" loading="lazy">
+          </div>
+          <div class="video-box">
+            <video controls playsinline preload="none" aria-label="THE START – Contempt Motion video">
+              <source src="https://video.twimg.com/amplify_video/2085355593347346432/vid/avc1/1280x720/ssscn4tdkFqCmSdR.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="info">
+            <h3>THE START – Contempt Motion</h3>
+            <p>Military tribunal for crimes against humanity.</p>
+          </div>
+        </article>
+
+        <!-- Video 3 - Fauci Contempt Hearing -->
+        <article class="video-card" data-video="https://video.twimg.com/amplify_video/2085353831181729792/vid/avc1/1284x726/sCjKgii6YjBAAXtQ.mp4">
+          <div class="thumbnail" tabindex="0" role="button" aria-label="Play Fauci Contempt Hearing">
+            <img src="thumbnail.png" alt="Fauci Contempt Hearing thumbnail" loading="lazy">
+          </div>
+          <div class="video-box">
+            <video controls playsinline preload="none" aria-label="Fauci Contempt Hearing video">
+              <source src="https://video.twimg.com/amplify_video/2085353831181729792/vid/avc1/1284x726/sCjKgii6YjBAAXtQ.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="info">
+            <h3>Fauci Contempt Hearing</h3>
+            <p>"Just getting started… Down they will ALL go."</p>
+          </div>
+        </article>
+
+        <!-- Video 4 - We Are in a WAR -->
+        <article class="video-card" data-video="https://video.twimg.com/amplify_video/2085331177297072128/vid/avc1/1268x584/3TyokwX6KGAd6wWq.mp4">
+          <div class="thumbnail" tabindex="0" role="button" aria-label="Play We Are in a WAR">
+            <img src="https://img.youtube.com/vi/aZ0OE9xoIsQ/sddefault.jpg" alt="We Are in a WAR thumbnail" loading="lazy">
+          </div>
+          <div class="video-box">
+            <video controls playsinline preload="none" aria-label="We Are in a WAR video">
+              <source src="https://video.twimg.com/amplify_video/2085331177297072128/vid/avc1/1268x584/3TyokwX6KGAd6wWq.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="info">
+            <h3>We Are in a WAR</h3>
+            <p>Critical thinking + prayer is essential. GOD WINS.</p>
+          </div>
+        </article>
+
+        <!-- Video 5 - America Will Never Be Communist -->
+        <article class="video-card" data-video="https://video.twimg.com/amplify_video/2085156072629698560/vid/avc1/1284x706/jyCUw-IQndiq8t1g.mp4">
+          <div class="thumbnail" tabindex="0" role="button" aria-label="Play America Will Never Be Communist">
+            <img src="thumbnail.png" alt="America Will Never Be Communist thumbnail" loading="lazy">
+          </div>
+          <div class="video-box">
+            <video controls playsinline preload="none" aria-label="America Will Never Be Communist video">
+              <source src="https://video.twimg.com/amplify_video/2085156072629698560/vid/avc1/1284x706/jyCUw-IQndiq8t1g.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="info">
+            <h3>America Will Never Be Communist</h3>
+            <p>With President Trump and We the People.</p>
+          </div>
+        </article>
+
+        <!-- Video 6 - Truth Teller Tales Interview -->
+        <article class="video-card" data-video="https://www.youtube.com/watch?v=aZ0OE9xoIsQ">
+          <div class="thumbnail" tabindex="0" role="button" aria-label="Play Truth Teller Tales Interview">
+            <img src="https://img.youtube.com/vi/aZ0OE9xoIsQ/sddefault.jpg" alt="Truth Teller Tales Interview thumbnail" loading="lazy">
+          </div>
+          <div class="video-box">
+            <iframe src="https://www.youtube.com/embed/aZ0OE9xoIsQ?si=KPtjIwk58V8v0Q-o" title="Truth Teller Tales Interview with Julie Donuts" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="info">
+            <h3>Truth Teller Tales Interview</h3>
+            <p>Full conversation about her journey and faith.</p>
+            <a class="link" href="https://www.youtube.com/watch?v=aZ0OE9xoIsQ" target="_blank" rel="noopener noreferrer">Watch on YouTube →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="connect" class="connect reveal" aria-labelledby="connect-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Connect</p>
+        <h2 id="connect-title" class="section-title">Stay <em>connected</em></h2>
+      </div>
+      <p class="connect-note">Only real account: <strong>@Juliedonuts</strong></p>
+      <div class="social-links">
+        <a href="https://x.com/Juliedonuts" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow Julie Donuts on X (Twitter)">𝕏 @Juliedonuts</a>
+        <a href="https://juliedonuts.substack.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Subscribe to Julie Donuts on Substack">Substack</a>
+        <a href="https://truthsocial.com/@Luvsmileys3" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow Julie Donuts on Truth Social">Truth Social</a>
+        <a href="https://rumble.com/v7dpoeu-if-you-hate-america-get-out-julie-donuts.html" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Watch Julie Donuts on Rumble">Rumble</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 <footer>
-  <p>GOD PROVIDES • WE WIN • TRUST OUR AMAZING PRESIDENT</p>
-  <p style="margin-top: 0.8rem;">
-    Unofficial professional showcase created with care for the community of Julie Donuts.<br>
-    All content and images belong to their respective owners. 
-    <a href="https://x.com/Juliedonuts" target="_blank">Follow the real @Juliedonuts</a>
-  </p>
+  <p>God provides • We win • Trust the plan</p>
+  <p><a href="https://x.com/Juliedonuts" target="_blank" rel="noopener noreferrer">Follow the real @Juliedonuts</a></p>
 </footer>
+
+<button class="back-to-top" aria-label="Back to top" tabindex="0">↑</button>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12});
+    revealEls.forEach(el=>io.observe(el));
+  } else {
+    revealEls.forEach(el=>el.classList.add('in'));
+  }
+
+  const backToTop = document.querySelector('.back-to-top');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    backToTop.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+
+  // Video thumbnail click-to-play functionality
+  const videoCards = document.querySelectorAll('.video-card');
+  videoCards.forEach(card => {
+    const thumbnail = card.querySelector('.thumbnail');
+    const videoBox = card.querySelector('.video-box');
+    const video = card.querySelector('video');
+    
+    if (thumbnail && videoBox) {
+      const playVideo = () => {
+        card.classList.add('playing');
+        if (video) {
+          video.play().catch(e => console.log('Autoplay prevented:', e));
+        }
+      };
+
+      thumbnail.addEventListener('click', playVideo);
+      thumbnail.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          playVideo();
+        }
+      });
+    }
+  });
+
+  // Gallery carousel functionality
+  const galleryCarousel = document.querySelector('.gallery-carousel');
+  const galleryTrack = document.querySelector('.gallery-track');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const prevBtn = document.querySelector('.gallery-nav-btn.prev');
+  const nextBtn = document.querySelector('.gallery-nav-btn.next');
+  const dotsContainer = document.querySelector('.gallery-dots');
+
+  if (galleryCarousel && galleryTrack && galleryItems.length > 0) {
+    let currentIndex = 0;
+    const totalItems = galleryItems.length;
+
+    // Create dots
+    galleryItems.forEach((_, index) => {
+      const dot = document.createElement('button');
+      dot.className = 'gallery-dot';
+      dot.setAttribute('aria-label', `Go to image ${index + 1}`);
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.gallery-dot');
+
+    function updateCarousel() {
+      galleryTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      if (currentIndex < 0) currentIndex = totalItems - 1;
+      if (currentIndex >= totalItems) currentIndex = 0;
+      updateCarousel();
+    }
+
+    function nextSlide() {
+      goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentIndex - 1);
+    }
+
+    // Button navigation
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    // Keyboard navigation
+    prevBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        prevSlide();
+      }
+    });
+    nextBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        nextSlide();
+      }
+    });
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const minSwipeDistance = 50;
+
+    galleryTrack.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    galleryTrack.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const swipeDistance = touchEndX - touchStartX;
+      if (Math.abs(swipeDistance) > minSwipeDistance) {
+        if (swipeDistance > 0) {
+          prevSlide();
+        } else {
+          nextSlide();
+        }
+      }
+    }
+
+    // Auto-play (optional - can be enabled/disabled)
+    // let autoPlayInterval = setInterval(nextSlide, 5000);
+    // galleryCarousel.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+    // galleryCarousel.addEventListener('mouseleave', () => autoPlayInterval = setInterval(nextSlide, 5000));
+  }
+</script>
 
 </body>
 </html>
