@@ -123,7 +123,7 @@ s0.parentNode.insertBefore(s1,s0);
     transition:transform 0.3s var(--ease-out);
   }
   .logo:hover{transform:scale(1.02);}
-  .logo img{width:36px;height:36px;object-fit:contain;filter:drop-shadow(0 0 10px var(--pink-glow));transition:filter 0.3s ease;}
+  .logo img{width:60px;height:60px;object-fit:contain;filter:drop-shadow(0 0 10px var(--pink-glow));transition:filter 0.3s ease;}
   .logo:hover img{filter:drop-shadow(0 0 14px var(--pink-glow));}
   .logo em{color:var(--pink);font-style:normal;}
   .logo span{font-size:0.85rem;font-weight:500;color:var(--gold);margin-left:0.3rem;font-style:italic;}
@@ -370,6 +370,8 @@ s0.parentNode.insertBefore(s1,s0);
     text-align:center;border-top:1px solid var(--line);
   }
   .connect-note{color:var(--text-faint);max-width:440px;margin:0 auto 2.2rem;font-size:1.02rem;}
+  .connect-note .email-link{color:var(--pink);text-decoration:none;font-weight:700;transition:color 0.2s ease;}
+  .connect-note .email-link:hover{color:#ff47a8;}
   .social-links{display:flex;flex-direction:column;gap:0.9rem;max-width:340px;margin:0 auto;}
   .social-btn{
     display:flex;align-items:center;justify-content:center;
@@ -377,6 +379,8 @@ s0.parentNode.insertBefore(s1,s0);
     color:#fff;padding:1.05rem;border-radius:14px;text-decoration:none;font-weight:700;
     transition:transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), background 0.25s ease;
   }
+  .social-btn.email-btn{background:rgba(255,200,87,0.15);border-color:var(--gold);order:-1;}
+  .social-btn.email-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-gold);background:rgba(255,200,87,0.25);}
   .social-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-pink);background:rgba(255,45,149,0.18);}
 
   footer{background:#050509;color:var(--text-faint);text-align:center;padding:2.8rem 1.6rem;font-size:0.9rem;border-top:1px solid var(--line);}
@@ -437,9 +441,8 @@ s0.parentNode.insertBefore(s1,s0);
 
 <nav aria-label="Primary navigation">
   <div class="nav-inner">
-    <a href="#" class="logo" aria-label="Donut Drops with Julie Home">
-      <img src="donut.png" alt="" role="presentation">
-      DONUT <em>DROPS</em> <span>with Julie</span>
+    <a href="#" class="logo" aria-label="Yuvlex Home">
+      <img src="donut.png" alt="Yuvlex logo" role="presentation">
     </a>
     <div class="nav-links" role="navigation" aria-label="Page sections">
       <a href="#about">About</a>
@@ -685,9 +688,11 @@ s0.parentNode.insertBefore(s1,s0);
         <p class="eyebrow">Connect</p>
         <h2 id="connect-title" class="section-title">Stay <em>connected</em></h2>
       </div>
-      <p class="connect-note">Only real account: <strong>@Juliedonuts</strong></p>
+      <p class="connect-note">Main contact: <strong><a href="mailto:info@donutdropswithjulie.com" class="email-link">info@donutdropswithjulie.com</a></strong></p>
       <div class="social-links">
+        <a href="mailto:info@donutdropswithjulie.com" class="social-btn email-btn" aria-label="Email info@donutdropswithjulie.com">📧 Email Us</a>
         <a href="https://x.com/Juliedonuts" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow Julie Donuts on X (Twitter)">𝕏 @Juliedonuts</a>
+        <a href="https://x.com/juliesnark1770?s=11" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow backup X account @juliesnark1770">𝕏 Backup @juliesnark1770</a>
         <a href="https://juliedonuts.substack.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Subscribe to Julie Donuts on Substack">Substack</a>
         <a href="https://truthsocial.com/@Luvsmileys3" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Follow Julie Donuts on Truth Social">Truth Social</a>
         <a href="https://rumble.com/v7dpoeu-if-you-hate-america-get-out-julie-donuts.html" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Watch Julie Donuts on Rumble">Rumble</a>
